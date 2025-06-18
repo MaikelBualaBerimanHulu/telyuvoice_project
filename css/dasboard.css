@@ -1,0 +1,689 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right, red, white);
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.telyuvoice {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #e74c3c;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.navbar-right .login-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.navbar-right .login-btn:hover {
+    background-color: #c0392b;
+}
+
+.greeting {
+    color: #333; 
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 15px;
+    padding: 5px 0;    
+    white-space: nowrap;
+}
+
+.logout-form {
+    display: inline-block; /* Penting agar form tidak mengambil lebar penuh dan merusak layout */
+    margin-left: 10px; /* Opsional: jarak dari sapaan */
+}
+
+.logout-btn {
+    background-color: #dc3545; /* Merah untuk logout */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c82333; /* Merah lebih gelap saat hover */
+    /* Pastikan gaya hover berbeda agar terlihat efeknya */
+}
+
+/* Mobile menu icon (hidden by default) */
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section (Halaman 1) */
+.halaman-1 {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    background-image: url('../asset/univ.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.halaman-1 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.red {
+    color: #e74c3c;
+}
+
+.grey {
+    color: #ffffff;
+}
+
+.fasilitas1 {
+    padding: 10px 25px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .fasilitas1:hover {
+    background-color: #f44336; /* merah telkom style */
+    color: #fff;
+    border-color: #f44336;
+    transform: translateY(-5px);    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+
+  .administrasi1{
+    padding: 10px 25px;
+    background-color: white;
+    color: #000000;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .administrasi1:hover {
+    background-color: #f44336; /* merah telkom style */
+    color: #fff;
+    border-color: #f44336;
+    transform: translateY(-5px);    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+
+  .lingkungan1{
+    padding: 10px 25px;
+    background-color: white;
+    color: #000000;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .lingkungan1:hover {
+    background-color: #f44336; /* merah telkom style */
+    color: #fff;
+    border-color: #f44336;
+    transform: translateY(-5px);    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+
+  .pelecehan1{
+    padding: 10px 25px;
+    background-color: white;
+    color: #000000;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .pelecehan1:hover {
+    background-color: #f44336; /* merah telkom style */
+    color: #fff;
+    border-color: #f44336;
+    transform: translateY(-5px);    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+
+.halaman-1 p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.tombol-layanan {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tombol-layanan:hover {
+    background-color: #c0392b;
+}
+
+/* About section */
+.about-telyuvoice {
+    display: flex;
+    align-items: center;
+    padding: 5rem 5%;
+    background-color: #fff;
+}
+
+.gambar-telyuvoice {
+    width: 300px;
+    height: auto;
+    margin-right: 3rem;
+}
+
+.teks-telyuvoice {
+    flex: 1;
+}
+
+.teks-telyuvoice h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.black {
+    color: #333;
+}
+
+.Telyu {
+    color: #e74c3c;
+}
+
+.Voice {
+    color: #7f8c8d;
+}
+
+.teks-telyuvoice p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Kategori section */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.container .header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.container .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.container .box {
+    flex: 1;
+    min-width: 200px;
+    max-width: calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.container .box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.container .text-bar {
+    padding: 15px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+/* Layanan section */
+.Layanan {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.Layanan .header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.Layanan .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.Layanan .box {
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(50% - 30px);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Layanan .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.Layanan .box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.Layanan .text-bar {
+    padding: 20px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Keluhan */
+.keluhan1{
+    background-color: #ff1900;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+.keluhan1:hover {
+    background-color: #c0392b;
+}
+
+.feed1{
+    background-color: #ff1900;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.feed1:hover {
+    background-color: #c0392b;
+}
+
+
+/* responsive page */
+@media screen and (max-width: 1024px) {
+    .container .box, .Layanan .box {
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navbar responsive */
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    .navbar a, .dropdown {
+        display: none;
+    }
+    
+    .navbar.responsive {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar.responsive a, .navbar.responsive .dropdown {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+    
+    .navbar.responsive .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 00%;
+        padding-left: 20px;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    .navbar-left, .navbar-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    /* About section responsive */
+    .about-telyuvoice {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 5%;
+    }
+    
+    .gambar-telyuvoice {
+        width: 200px;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    /* Kategori and Layanan responsive */
+    .container .box1, .Layanan .box {
+        min-width: 100%;
+        max-width: 100%;
+        background-image: url(../asset/univ.jpeg);
+    }
+   
+    
+    .container .header, .Layanan .header {
+        font-size: 2rem;
+    }
+    
+    /* Hero section responsive */
+    .halaman-1 h1 {
+        font-size: 2.5rem;
+    }
+    
+    .halaman-1 p {
+        font-size: 1rem;
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer h1{
+    margin: 0;
+    font-size: 18px;
+}
+.footer p{
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .halaman-1 {
+        height: 80vh;
+    }
+    
+    .halaman-1 h1 {
+        font-size: 2rem;
+    }
+    
+    .teks-telyuvoice h1 {
+        font-size: 1.8rem;
+    }
+    
+    .container .header, .Layanan .header {
+        font-size: 1.8rem;
+    }
+    
+    .navbar-left img {
+        height: 30px;
+    }
+    
+    .telyuvoice {
+        font-size: 1rem;
+    }
+}
+
+/*oprator*/
+.operator-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+
+.operator-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.operator-table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.operator-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.operator-table th, .operator-table td {
+    border: 1px solid #391313;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.operator-table td {
+    color: rgb(255, 255, 255);
+}
+
+.operator-table th {
+    background-color: #a20808;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.operator-table tr:nth-child(even) {
+    background-color: #9f3c3c;
+}
+
+.operator-table tr:nth-child(odd) {
+    background-color: #7d3434;
+}
+
+.operator-table form {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.operator-table select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.operator-table button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.operator-table button:hover {
+    background-color: #218838;
+}
+
+.operator-section .message-box {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.operator-section .message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.operator-section .message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.operator-section .message-box p {
+    margin: 0;
+}
+
+.admin-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}

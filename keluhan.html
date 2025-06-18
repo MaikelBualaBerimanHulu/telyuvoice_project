@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/keluhan.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Ajukan Keluhan Mu!</h2>
+
+        <form action="php/keluhan.php" method="post">
+            
+            <label for="kategori">Kategori keluhan</label>
+            <select name="kategori" id="kategori" required>
+                <option value="pilih-kategori">-- Pilih Kategori --</option>
+                <option value="fasilitas">Fasilitas</option>
+                <option value="administrasi">Administrasi</option>
+                <option value="lingkungan">Lingkungan</option>
+                <option value="pelecehan">Pelecehan</option>
+                <option value="lain-lain">Lain-lain</option>
+            </select>
+
+            <label for="deskripsi">Deskripsikan Keluhan</label>
+            <textarea name="deskripsi" id="deskripsi" placeholder="Tulis keluhan Anda di sini..." required></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

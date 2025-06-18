@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Register.css">
+    <title>Register</title>
+    <script>
+        function updateProdiOptions() {
+            const fakultas = document.getElementById('fakultas').value;
+            const prodi = document.getElementById('prodi');
+            prodi.innerHTML = '';
+
+            let options = [];
+
+            if (fakultas === 'FIT') {
+                options = [
+                    { value: 'D3 Rekayasa Perangkat Lunak Aplikasi', text: 'D3 Rekayasa Perangkat Lunak Aplikasi' },
+                    { value: 'D3 Sistem Informasi Akuntansi', text: 'D3 Sistem Informasi Akuntansi' },
+                    { value: 'D3 Teknologi Telekomunikasi', text: 'D3 Teknologi Telekomunikasi' },
+                    { value: 'D3 Sistem Informasi', text: 'D3 Sistem Informasi' },
+                    { value: 'D3 Teknologi Komputer', text: 'D3 Teknologi Komputer' },
+                    { value: 'D3 Digital Marketing', text: 'D3 Digital Marketing' },
+                    { value: 'D3 Hospitalty & Culinary', text: 'D3 Hospitalty & Culinary' },
+                    { value: 'D4 Teknologi Rekayara Multi Media', text: 'D3 Teknologi Rekayara Multi Media' },
+                    { value: 'D4 Sistem Informasi Kota Cerdas', text: 'D3 Sistem Informasi Kota Cerdas' },
+                ];
+            } else if (fakultas === 'FTE') {
+                options = [
+                    { value: 'S1 Teknik Elektro', text: 'S1 Teknik Elektro' },
+                    { value: 'S1 Teknik Telekomunikasi', text: 'S1 Teknik Telekomunikasi' },
+                    { value: 'S1 Teknik Fisika', text: 'S1 Teknik Fisika' },
+                    { value: 'S1 Teknik Biomedis', text: 'S1 Teknik Biomedis' },
+                    { value: 'S1 Teknik Sistem Energi', text: 'S1 Teknik Sistem Energi' },
+                ];
+            } else if (fakultas === 'FIF') {
+                options = [
+                    { value: 'S1 Teknik Informatika', text: ' Teknik Informatika' },
+                    { value: 'S1 Teknologi Informasi', text: ' Teknologi Informasi' },
+                    { value: 'S1 Sains data', text: 'S1 Sains data' },
+                    { value: 'S1 Rekayasa Perangkat Lunak', text: 'S1 Rekayasa Perangkat Lunak' },
+                ];
+            } else if (fakultas === 'FRI') {
+                options = [
+                    { value: 'S1 Teknik Industri', text: 'S1 Teknik Industri' },
+                    { value: 'S1 Sistem Informasi', text: 'S1 Sistem Informasi' },
+                    { value: 'S1 Teknik Logistik', text: 'S1 Teknik Logistik' },
+                ];
+            } else if (fakultas === 'FEB') {
+                options = [
+                    { value: 'S1 Ekonomi', text: 'S1 Ekonomi' },
+                    { value: 'S1 Manajemen', text: 'S1 Manajemen' },
+                    { value: 'S1 Akuntansi', text: 'S1 Akuntansi' },
+                ];
+            } else if (fakultas === 'FKS') {
+                options = [
+                    { value: 'S1 Ilmu Komunikasi', text: 'S1 Ilmu Komunikasi' },
+                    { value: 'S1 Psikologi', text: 'S1 Psikologi' },
+                ];
+            } else if (fakultas === 'FIK') {
+                options = [
+                    { value: 'S1 Desain Komunikasi Visual', text: 'S1 Desain Komunikasi Visual' },
+                    { value: 'S1 Desain Produk', text: 'S1 Desain Produk' },
+                    { value: 'S1 Desain Interior', text: 'S1 Desain Interior' },
+                    { value: 'S1 Desain Grafis', text: 'S1 Desain Grafis' },
+                    { value: 'S1 Seni Rupa', text: 'S1 Seni Rupa' },
+                ];
+            }
+
+            options.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option.value;
+                opt.textContent = option.text;
+                prodi.appendChild(opt);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Register TelyuVoice</h1>
+    </header>
+    <main class="container">
+        <h2>Register</h2>
+        <form action="php/register.php" method="post">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fakultas">Fakultas</label>
+                <select name="fakultas" id="fakultas" onchange="updateProdiOptions()">
+                    <option value="FTE">Fakultas Teknik Elektro</option>
+                    <option value="FIF">Fakultas Informatika</option>
+                    <option value="FRI">Fakultas Rekayasa Industri</option>
+                    <option value="FEB">Fakultas Ekonomi & Bisnis</option>
+                    <option value="FIT">Fakultas Ilmu Terapan</option>
+                    <option value="FKS">Fakultas Komunikasi Sosial</option>
+                    <option value="FIK">Fakultas Industri Kreatif</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="prodi">Prodi</label>
+                <select name="prodi" id="prodi">
+                    <!-- Options will be populated based on Fakultas selection -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" name="submit">Register</button>
+        </form>
+    </main>
+</body>
+</html>

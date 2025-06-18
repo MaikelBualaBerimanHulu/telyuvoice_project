@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eef2f7;
+}
+
+td {
+    color: #555555;
+    font-size: 0.95em;
+}
+
+.btn-back {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 12px 25px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
+/*style editdelete keluhan saya*/
+
+.action-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.edit-btn {
+    background-color: #ff0000;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #920000;
+}
+
+.delete-btn {
+    background-color: #ff0000;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #920000;
+}

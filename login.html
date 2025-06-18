@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TelyuVoice</title>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="php/login.php" method="post">
+            <div class="form-group">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <script>
+                document.querySelector('.login-btn').addEventListener('click', function() {
+                    window.location.href = 'dasboard.html'; // Ganti dengan URL halaman login Anda
+                });
+            
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('error')) {
+                alert("Username atau password salah!");
+            }
+            if (params.get('register') === 'success') {
+                alert("Pendaftaran berhasil! Silakan login.");
+            }
+        }
+            </script>
+
+            
+            <div class="register">
+                <a href="Register.html">Tidak punya akun?</a> 
+            </div>
+            
+        </form>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+         document.body.classList.add('fade-in'); // Menambahkan kelas 'fade-in' saat halaman dimuat
+});
+    </script>
+</body>
+</html>
